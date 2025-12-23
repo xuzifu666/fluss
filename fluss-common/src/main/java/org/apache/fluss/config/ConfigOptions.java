@@ -850,7 +850,7 @@ public class ConfigOptions {
                                     + "this list need not contain the full set of servers (you may want more than one, though, in case a server is down) ");
 
     public static final ConfigOption<MemorySize> CLIENT_WRITER_BUFFER_MEMORY_SIZE =
-            key("client.writer.buffer.memory-size")
+            key("client.writer.buffer.memory-size1")
                     .memoryType()
                     .defaultValue(MemorySize.parse("64mb"))
                     .withDescription(
