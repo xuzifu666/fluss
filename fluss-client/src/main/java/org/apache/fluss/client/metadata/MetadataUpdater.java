@@ -104,7 +104,7 @@ public class MetadataUpdater {
         return cluster.getBucketLocation(tableBucket);
     }
 
-    public int leaderFor(TablePath tablePath, TableBucket tableBucket) {
+    public int leaderFor(TablePath path, TableBucket tableBucket) {
         Integer serverNode = cluster.leaderFor(tableBucket);
         if (serverNode == null) {
             for (int i = 0; i < MAX_RETRY_TIMES; i++) {
