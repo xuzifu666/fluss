@@ -111,11 +111,11 @@ public class MetadataUpdater {
                 // check if bucket is for a partition
                 if (tableBucket.getPartitionId() != null) {
                     updateMetadata(
-                            Collections.singleton(tablePath),
+                            Collections.singleton(path),
                             null,
                             Collections.singleton(tableBucket.getPartitionId()));
                 } else {
-                    updateMetadata(Collections.singleton(tablePath), null, null);
+                    updateMetadata(Collections.singleton(path), null, null);
                 }
                 serverNode = cluster.leaderFor(tableBucket);
                 if (serverNode != null) {
